@@ -260,8 +260,6 @@ Here are further recommendations for various types of behavioral data:
   * NWB: Store using [TimeIntervals](https://pynwb.readthedocs.io/en/stable/tutorials/general/plot_timeintervals.html) for sleep stages and appropriate TimeSeries for physiological measurements.
   * BIDS: TODO - How to store?
   * PsychDS: TODO - How to store?
-  * EDF: It is supported in different softwares and programming languages: Matlab, Python, R and can be a middle format to be later converted to other standards and support time-series and metadata altogether.
-    * Reference: [https://www.edfplus.info/](https://www.edfplus.info/)
 * **Operant Conditioning and Learning data**:
   * TODO - How to store?
 * **Physical Activity Levels**:
@@ -300,8 +298,6 @@ The choice of standard for neural data depends on the recording technology and t
     * Reference: [https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/electroencephalography.html)
   * NWB can be used for studies combining EEG/MEG with other neural recordings by storing EEG/MEG as ElectricalSeries.
     * TODO - Link to NWB electrophysiology tutorial
-  * EDF: It is supported in different softwares and programming languages: Matlab, Python, R and can be a middle format to be later converted to other standards and support time-series and metadata altogether.
-    * Reference: [https://www.edfplus.info/](https://www.edfplus.info/)
 
 #### Imaging Data
 

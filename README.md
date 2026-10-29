@@ -1,10 +1,9 @@
 # BBQS Standards
 
-[!WARNING]
-**This repo is in active development.** This is a port of the BBQS Standards Working Group
-documents. Content has not yet been fully validated yet. Until this repo is officially
-released, the current GoogleDoc documents remain the current documents.
-
+> [!WARNING]
+> **This repository is in active development.** It is a port of the BBQS Standards Working
+> Group documents, and the content has not been fully validated yet. Until this repository
+> is officially released, the Google Docs linked below remain the current documents.
 
 Documents of the [BBQS Working Group on Data Standards](https://brain-bbqs.org/working-groups/standards/),
 maintained as Markdown so that changes can be reviewed and versioned in Git.
@@ -17,7 +16,8 @@ maintained as Markdown so that changes can be reviewed and versioned in Git.
 These documents were originally drafted in Google Docs
 ([guidelines](https://docs.google.com/document/d/1vIJ01La9G76FfGywS3IbG4o1GR4qquS31MoJ2B4_4os/edit),
 [charter](https://docs.google.com/document/d/1WIVI8HZF4-IfZZ61UjCZx2K7NyYx_CaTuIHmhFo7eYw/edit)).
-This repository is now the source of truth.
+Once this repository is released, it becomes the source of truth and the Google Docs will
+be retired.
 
 ## Repository layout
 
@@ -35,8 +35,8 @@ scripts/check_docs.py # checks the conventions below (runs in CI on every PR)
 
 ## On the BBQS website
 
-The documents are published at <https://brain-bbqs.org/working-groups/standards>. The
-website ([brain-bbqs/bbqs-app](https://github.com/brain-bbqs/bbqs-app)) downloads
+Once released, the documents will be published at
+<https://brain-bbqs.org/working-groups/standards>. The website ([brain-bbqs/bbqs-app](https://github.com/brain-bbqs/bbqs-app)) downloads
 `content/` from `main` of this repository every time it builds (on each deploy and at
 least once a day), so merged changes appear on the site within a day. Nothing needs to be
 changed in the website repository to update or add a document.
