@@ -191,14 +191,6 @@ Here are further recommendations for various types of behavioral data:
 * **Electromyography (EMG)**:
   * TODO - How to store?
   * Comment: [BIDS: BEP042](https://bids-website.readthedocs.io/en/latest/extensions/beps/bep_042.html) is working on support of surface EMG
-
-* **Force Plates**:
-  * Contact person: ??
-  * Groups collecting data: ?, ?, ?
-  * Example source data: `<link>`
-  * Example standardized data: `<links per standard>`
-  * TODO - How to store?
-
 * **Force Plates**:
   * TODO - How to store?
 * **Virtual Reality (VR) Systems**:
