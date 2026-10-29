@@ -1,9 +1,0 @@
-# Hugo module configuration so that the documents in content/ can be imported
-# into the BBQS website (https://github.com/brain-bbqs/brain-bbqs.github.io).
-# The importing site chooses where the content is mounted; see README.md.
-module:
-  hugoVersion:
-    min: "0.112.0"
-  mounts:
-    - source: content
-      target: content

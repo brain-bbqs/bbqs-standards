@@ -1,9 +1,8 @@
 ---
-title: Guidelines for BBQS Data Standards
-linkTitle: Data Standards Guidelines
-type: docs
-weight: 10
-toc: true
+title: "Guidelines for BBQS Data Standards"
+short_title: Data Standards Guidelines
+description: Which data standards to use for BBQS behavior and neural data, and what to do when your data is not yet supported by them.
+order: 1
 ---
 
 ## Introduction
@@ -92,7 +91,7 @@ There are several key NIH Brain Initiative data standards that are relevant for 
 * Storing behavioral data in BIDS: [https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html](https://bids-specification.readthedocs.io/en/stable/modality-specific-files/behavioral-experiments.html)
 * BIDS Apps (analysis pipelines that work with BIDS datasets): [https://bids-apps.neuroimaging.io/](https://bids-apps.neuroimaging.io/)
 
-**Getting help:** For generic BIDS-related questions use the [NeuroStars](https://neurostars.org/tags/bids) Discourse Forum, under the bids tag. For specific questions and issues, open an [issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) on the relevant BIDS GitHub repositories.
+**Getting help:** For generic BIDS-related questions use the [NeuroStars](https://neurostars.org/tags/bids) Discourse Forum, under the `bids` tag. For specific questions and issues, open an [issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) on the relevant BIDS GitHub repositories.
 
 ### Psych-DS: Psychological Data and Behavior
 
@@ -363,13 +362,6 @@ NWB supports a variety of options for integrating custom metadata and new data t
 * PsychDS accommodates any data that is stored in rows and columns (tabular data). It does not currently provide specific formatting or requirements for particular subfields, methods, or behavior types. Instead, every field/column is essentially a ‘custom’ field, and it is up to the researcher to clearly name and define all fields in the primary JSON metadata file.
 * If you have a series of fields (names, definitions, type or value restrictions) that you believe would be of benefit to a larger community, we are currently developing an extension process - for now, please open an issue as described in the “getting help” section.
 
-### How do I manage large collections of data?
-
-* **Large-scale recordings (e.g., 100+ GB NWB files)** - store the raw and processed data in separate NWB files, and use the same metadata between the two files
-* **Continuous, multi-day data collection**
-  * Large-scale data (neural data, videos) - how to break up the data to manageable pieces?
-  * Annotations that are more naturally stored in a single file for analysis?
-
 ### Additional recommendations
 
 * **Use of Hierarchical Event Descriptors (HED)** is recommended for annotating events in both BIDS and NWB datasets. HED provides a standardized vocabulary for describing events in neuroscience experiments, facilitating data integration and analysis.
@@ -378,8 +370,7 @@ NWB supports a variety of options for integrating custom metadata and new data t
     * **Making HED meaningful:** [https://www.hedtags.org/hed-resources/HedAnnotationSemantics.html](https://www.hedtags.org/hed-resources/HedAnnotationSemantics.html)
   * **Integrations with Standards:**
     * BIDS: [https://bids-specification.readthedocs.io/en/stable/appendices/hed.html](https://bids-specification.readthedocs.io/en/stable/appendices/hed.html)
-    * NWB: Integration: TODO - Link to HED integration with NWB
-      [https://www.hedtags.org/ndx-hed/](https://www.hedtags.org/ndx-hed/)
+    * NWB: [https://www.hedtags.org/ndx-hed/](https://www.hedtags.org/ndx-hed/)
 
 * **Use of standardized terminologies and ontologies** is recommended for describing experimental metadata, such as species, brain regions, and cell types. This facilitates data integration and search across datasets.
   * NCBI Taxonomy for species: [https://www.ncbi.nlm.nih.gov/taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)
@@ -407,3 +398,7 @@ NWB supports a variety of options for integrating custom metadata and new data t
   * As described above, some data standards also support inclusion of custom metadata fields or columns in data tables via various mechanisms. To ensure compliance, such custom fields are often required to be described via formal schema extensions or via (simpler) data field descriptors. **Data Field Descriptors** are a specific kind of metadata stored alongside the data (often as dictionaries) and are used to define the meanings of individual columns/fields within the data, and provide important parameters such as data type (integer, string, factor), minimum and maximum values, and missing values.
 
 * **Data schema should be defined via formal data schema languages.** Data Schema Languages provide a formal mechanism for describing the structure, constraints, and validation rules for data formats, and are used to formally define data schema. Depending on the data format or use case, different schema languages may be appropriate, e.g., JSON Schema, XML Schema, LinkML or HDMF. For example, NWB uses the HDMF schema language, BIDS uses a custom YAML-based language, and PsychDS uses LinkML.
+
+* **How do I manage large collections of data?**
+  * **Large-scale recordings (e.g., 100+ GB NWB files)**: Store the raw and processed data in separate NWB files, and use the same metadata between the files
+  * **Continuous, multi-day data collection:** Breaking up recordings across files (e.g, per day) is recommended if single files become too large. Smaller data, e.g., annotations may be more naturally stored in a single separate file to simplify analysis. To provide context, relevant parts of the smaller data may be duplicated in the subset files, e.g., including annotations for a particular day also in the corresponding neural data file for that day.

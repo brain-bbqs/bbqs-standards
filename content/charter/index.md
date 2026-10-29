@@ -1,9 +1,8 @@
 ---
 title: "Charter: BBQS DCAIC Working Group on Data Standards"
-linkTitle: Working Group Charter
-type: docs
-weight: 20
-toc: true
+short_title: Working Group Charter
+description: Goals, scope, and organization of the BBQS Working Group on Data Standards.
+order: 2
 ---
 
 ## 1. Background
