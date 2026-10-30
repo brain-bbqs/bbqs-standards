@@ -1,10 +1,5 @@
 # BBQS Standards
 
-> [!WARNING]
-> **This repository is in active development.** It is a port of the BBQS Standards Working
-> Group documents, and the content has not been fully validated yet. Until this repository
-> is officially released, the Google Docs linked below remain the current documents.
-
 Documents of the [BBQS Working Group on Data Standards](https://brain-bbqs.org/working-groups/standards/),
 maintained as Markdown so that changes can be reviewed and versioned in Git.
 
@@ -16,8 +11,8 @@ maintained as Markdown so that changes can be reviewed and versioned in Git.
 These documents were originally drafted in Google Docs
 ([guidelines](https://docs.google.com/document/d/1vIJ01La9G76FfGywS3IbG4o1GR4qquS31MoJ2B4_4os/edit),
 [charter](https://docs.google.com/document/d/1WIVI8HZF4-IfZZ61UjCZx2K7NyYx_CaTuIHmhFo7eYw/edit)).
-Once this repository is released, it becomes the source of truth and the Google Docs will
-be retired.
+With the release of this repository, the documents here become the source of truth and the Google Docs will
+be retired but remain available for reference. 
 
 ## Repository layout
 
