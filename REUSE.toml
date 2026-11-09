@@ -1,0 +1,15 @@
+version = 1
+
+# Documents (and their figures) and the README
+[[annotations]]
+path = ["content/**", "README.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 BBQS Working Group on Data Standards and contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Code, CI, and repository configuration
+[[annotations]]
+path = ["scripts/**", ".github/**", ".gitignore"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 BBQS Working Group on Data Standards and contributors"
+SPDX-License-Identifier = "MIT"
