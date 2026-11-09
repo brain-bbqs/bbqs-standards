@@ -25,6 +25,8 @@ content/              # the documents; everything the website renders lives here
     figures/
       guidelines-figures.pptx       # editable source for all figures
       data-standards-overview.svg   # Figure 1, rendered from the .pptx
+      bbqs-standards-stack.svg      # Figure 2, the BBQS standards stack (source; a link on every element)
+      bbqs-standards-stack.svgtune  #   step-by-step walkthrough of Figure 2 for talks
 scripts/check_docs.py # checks the conventions below (runs in CI on every PR)
 ```
 
@@ -99,4 +101,22 @@ Figures are kept as an editable source file plus a rendered SVG for display:
   (`https://github.com/brain-bbqs/bbqs-standards/blob/main/content/<doc>/figures/<file>.pptx`)
   rather than with a relative path, so readers of the website are sent to the version in
   this repository instead of a copy published with the website.
+
+#### Figures with links
+
+Figure 2 (`bbqs-standards-stack.svg`) has a link on every element, so that readers can open
+the website of each standard, extension, or proposal. It has no `.pptx`: the SVG is the
+source and is edited directly, e.g. in Inkscape or a text editor. Each element is an
+`<a href="...">` around its shapes and text, and the elements are grouped into Inkscape
+layers, one per build step (`inkscape:label`). Give new elements a link, and keep them in the
+layer of their step. With [svgtune](https://github.com/yarikoptic/svgtune), the build steps
+become a walkthrough for talks, one SVG per step (not committed):
+
+```bash
+cd content/guidelines/figures && svgtune bbqs-standards-stack.svgtune   # -> bbqs-standards-stack_tuned/
+```
+
+The figure is also used in the BBQS standards paper
+([brain-bbqs/standards_paper](https://github.com/brain-bbqs/standards_paper)), which includes
+this repository as a Git submodule.
 
