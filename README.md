@@ -100,3 +100,14 @@ Figures are kept as an editable source file plus a rendered SVG for display:
   rather than with a relative path, so readers of the website are sent to the version in
   this repository instead of a copy published with the website.
 
+
+## Licensing
+
+The documents in `content/` (including figures) and this README are licensed under
+[CC-BY-4.0](LICENSES/CC-BY-4.0.txt); the scripts and CI configuration are licensed under
+[MIT](LICENSES/MIT.txt).
+
+This repository follows the [REUSE specification](https://reuse.software/): the full
+license texts are in `LICENSES/`, and `REUSE.toml` declares which license applies to
+which files, so new files need no per-file license header. CI checks compliance on every
+pull request; to check locally, run `uvx reuse lint` (or `pip install reuse && reuse lint`).

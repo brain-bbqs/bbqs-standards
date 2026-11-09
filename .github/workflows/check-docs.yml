@@ -18,3 +18,9 @@ jobs:
           python-version: "3.12"
       - run: pip install pyyaml
       - run: python scripts/check_docs.py
+
+  reuse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: fsfe/reuse-action@v6
