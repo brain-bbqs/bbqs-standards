@@ -39,6 +39,10 @@ We are aware that BBQS projects include data that is not yet published, human da
 
 There are several key NIH Brain Initiative data standards that are relevant for BBQS. Each of these standards typically targets different types of experiments, e.g., neurophysiology (NWB), neuroimaging (BIDS), and psychology (PsychDS). Each of these standards also provides different capabilities for storing additional behavioral data. Depending on the data modalities used in an experiment, multiple data standards may be relevant and may need to be used in combination.
 
+![The BBQS standards stack](figures/bbqs-standards-stack.svg)
+
+***Figure 2:*** The BBQS standards stack. For each layer of data standardization, the figure shows what is recommended for BBQS (solid boxes), what is in progress as an extension or proposal (dashed boxes), and what still needs a standard (grey). BBQS data types (bottom) reach the EMBER archive through NWB and the DANDI layout (orange), BIDS (green), or Psych-DS (grey); thin lines join each data type to every standard that can hold it. Ontologies and terminologies (4) and schema languages (6) serve both organization layers. Where the figure is shown as an interactive SVG (for example, on the BBQS website), each element links to the website of its standard, extension, or proposal. Status as of October 2026. (figure source: [bbqs-standards-stack.svg](https://github.com/brain-bbqs/bbqs-standards/blob/main/content/guidelines/figures/bbqs-standards-stack.svg))
+
 ### Neurodata Without Borders (NWB): Neurophysiology and Behavior
 
 **Overview:** NWB is a data standard for neurophysiology and behavior data, providing a common framework for storing and sharing data from various sources, including electrophysiology, optophysiology, and behavioral experiments. NWB uses HDF5 as its primary storage format, which allows for efficient storage and access of large, complex datasets (NWB also supports Zarr). Each NWB file describes one data collection session.
